@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/app/ui/dashboard/users/users.module.css";
+import styles from "./users.module.css";
 import Search from "@/app/ui/dashboard/search/search";
 import Link from "next/link";
 import Image from "next/image";

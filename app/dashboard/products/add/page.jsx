@@ -1,4 +1,4 @@
-import styles from "@/app/ui/dashboard/products/addProduct/addProducts.module.css";
+import styles from "./addProducts.module.css";
 
 const AddProductPage = () => {
   return (
