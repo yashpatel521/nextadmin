@@ -10,7 +10,7 @@ const Product = () => {
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placrholder={"Search for a prduct ..."} />
-        <Link href="/dashboard/product/add">
+        <Link href="/dashboard/products/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
       </div>
@@ -45,7 +45,7 @@ const Product = () => {
             <td>34</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/dashboard/users/edit">
+                <Link href="/dashboard/products/edit">
                   <button className={`${styles.button} ${styles.view}`}>
                     View
                   </button>
