@@ -1,18 +1,11 @@
+import { fetchUser } from "@/app/backend/data";
 import styles from "./singleUser.module.css";
 import Image from "next/image";
+import { updateUser } from "@/app/backend/action";
 
 const SingleUserPage = async ({ params }) => {
   const { id } = params;
-  const user = {
-    username: "John Doe",
-    email: "john@example",
-    id: id,
-    phone: "1234567890",
-    address: "1234567890",
-    isAdmin: true,
-    isActive: true,
-    avatar: "/noavatar.png",
-  };
+  const user = await fetchUser(id);
 
   return (
     <div className={styles.container}>
@@ -23,8 +16,8 @@ const SingleUserPage = async ({ params }) => {
         {user.username}
       </div>
       <div className={styles.formContainer}>
-        <form action="" className={styles.form}>
-          <input type="hidden" name="id" value={user.id} />
+        <form action={updateUser} className={styles.form}>
+          <input type="hidden" name="id" value={user._id} />
           <label>Username</label>
           <input type="text" name="username" placeholder={user.username} />
           <label>Email</label>
