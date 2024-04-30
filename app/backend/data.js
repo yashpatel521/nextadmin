@@ -66,7 +66,7 @@ export const fetchProduct = async (id) => {
 export const cards = [
   {
     id: 1,
-    title: "Total Users",
+    title: "Users",
     number: 10.928,
     change: 12,
   },
