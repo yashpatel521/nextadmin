@@ -57,7 +57,11 @@ const Product = async ({ searchParams }) => {
                     </button>
                   </Link>
                   <form action={deleteProduct}>
-                    <input type="hidden" name="id" value={product._id} />
+                    <input
+                      type="hidden"
+                      name="id"
+                      value={product._id.toString()}
+                    />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
